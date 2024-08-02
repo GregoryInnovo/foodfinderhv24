@@ -1,5 +1,20 @@
 import Image from "next/image";
+import { ModeToggle } from "@/components/sections/ModeToggle";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
+import { CardWithForm } from "@/components/sections/CardWithForm";
+import Chat from "@/components/sections/Chat";
 
+import { CarouselSection } from "@/components/sections/CarouselSection";
+import { ChatFood } from "@/components/component/chat-food";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -8,6 +23,7 @@ export default function Home() {
           Get started by editing&nbsp;
           <code className="font-mono font-bold">src/app/page.js</code>
         </p>
+        <ModeToggle />
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
@@ -38,6 +54,26 @@ export default function Home() {
           priority
         />
       </div>
+      <section className="flex items-center justify-around my-6 w-full">
+        <Card>
+          <CardHeader>
+            <CardTitle>Card Title</CardTitle>
+            <CardDescription>Card Description</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>Card Content</p>
+          </CardContent>
+          <CardFooter>
+            <p>Card Footer</p>
+          </CardFooter>
+        </Card>
+
+        <Button variant="outline">Button</Button>
+
+        <CardWithForm />
+      </section>
+      <ChatFood />
+      <CarouselSection />
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
